@@ -312,11 +312,9 @@ nav li a {
   display: flex;
   justify-content: center;
   align-items: center;
+  align-self: center;
   width: 925px;
-}
-
-.testimonial.text {
-  margin-right: 48px;
+  gap: 48px;
 }
 
 .testimonial-svg {
@@ -344,6 +342,7 @@ nav li a {
   font-weight: 800;
   font-size: 24px;
   line-height: 31px;
+  margin-bottom: 16px;
 
   color: var(--white-100);
 }
