@@ -7,57 +7,120 @@
   --gradient-2: linear-gradient(90deg, #07C1FC 0%, #7F60F9 100%);
 }
 
+@font-face {
+  font-family: 'Clash Display';
+  src: url('./fonts/clash-display/clash-display-variable.woff2') format('woff2');
+  font-weight: 200 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'DM Sans';
+  src: url('./fonts/dm-sans/dm-sans-variable.woff2') format('woff2');
+  font-weight: 100 1000;
+  font-style: normal;
+  font-display: swap;
+}
+
 * {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
+:focus-visible {
+  outline: 2px solid var(--white-100);
+  outline-offset: 3px;
+}
+
 body {
   font-family: 'DM Sans', system-ui, sans-serif;
-  overflow-x: hidden;
   display: flex;
   flex-direction: column;
+  overflow-x: hidden;
 
   background-color: var(--black-100);
 }
 
-main{
+main {
   display: flex;
-  flex-direction: column;
   flex: 1;
+  flex-direction: column;
   min-height: 0;
   gap: 100px;
   padding-top: 80px;
 }
 
+.section-title {
+  font-family: 'Clash Display';
+  font-weight: 600;
+  font-size: 48px;
+  line-height: 59px;
+
+  background: var(--gradient-1);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+/* Header */
+
 header {
-  justify-content: center;
-  align-items: center;
+  margin-top: 24px;
+  padding: 0 48px;
+
   font-family: 'Clash Display';
   font-size: 24px;
-  padding: 0 48px;
-  margin-top: 24px;
-
   color: var(--white-100);
 }
-nav ul {
+
+.nav-list {
   display: flex;
+  align-items: center;
   justify-content: center;
   gap: 16px;
   list-style: none;
 }
-nav li a {
-  list-style: none;
-  margin: 0 15px;
+
+.nav-item {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.nav-item + .nav-item::before {
+  content: '';
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+
+  background: var(--white-100);
+}
+
+.nav-link {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+
+  color: inherit;
   text-decoration: none;
-  color: inherit
+}
+
+.nav-icon {
+  width: 24px;
+  height: 24px;
 }
 
 .home-link {
   font-weight: 700;
-  line-height: 30px;
 }
+
+/* Hero */
 
 .hero {
   position: relative;
@@ -100,10 +163,10 @@ nav li a {
 
 .hero h1 {
   font-family: 'Clash Display';
-  font-size: 64px;
-  text-align: center;
   font-weight: 600;
+  font-size: 64px;
   line-height: 79px;
+  text-align: center;
 
   background: var(--gradient-1);
   -webkit-background-clip: text;
@@ -112,60 +175,62 @@ nav li a {
 }
 
 .hero p {
-  font-family: 'DM Sans';
+  margin-top: 16px;
+
   font-size: 24px;
   font-weight: 400;
   line-height: 150%;
   text-align: center;
-  margin-top: 16px;
   color: var(--white-200);
 }
 
-.btn-container {
-  margin-top: 32px;
+.hero__actions {
   display: flex;
-  justify-content: center;
   align-items: center;
+  justify-content: center;
   gap: 16px;
+  margin-top: 32px;
 }
 
-.btn-container button {
-  font-family: 'Clash Display';
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
   width: 270px;
   min-height: 55px;
   padding: 16px;
+
+  font-family: 'Clash Display';
   font-size: 24px;
-  font-weight: medium;
   line-height: 30px;
+  text-decoration: none;
+
   border: 1px solid transparent;
   cursor: pointer;
 }
 
-.btn-services {
+.btn--outline {
   font-weight: 500;
-
   color: var(--white-100);
-  background: 
+  background:
     linear-gradient(var(--black-100), var(--black-100)) padding-box,
     var(--gradient-2) border-box;
 }
 
-.btn-packages {
+.btn--gradient {
   font-weight: 600;
   color: var(--white-100);
   background: var(--gradient-2);
 }
 
-.btn-packages img {
-  margin-right: 8px;
-  vertical-align: middle;
-}
+/* About Us */
 
 .about-us {
   position: relative;
   display: flex;
-  justify-content: center;
   align-items: flex-end;
+  justify-content: center;
 }
 
 .about-us img {
@@ -177,40 +242,30 @@ nav li a {
   mask-image: linear-gradient(to bottom, #010101 60%, transparent 100%);
 }
 
-.about-us h1 {
+.about-us .section-title {
   position: absolute;
-  font-family: 'Clash Display';
-  font-style: normal;
-  font-weight: 600;
-  font-size: 48px;
-  line-height: 59px;
   bottom: 135px;
   left: 528px;
-
-  background: var(--gradient-1);
-  -webkit-background-clip: text;
-  background-clip: text;
-  color: transparent;
   z-index: 2;
 }
 
 .about-us p {
   position: absolute;
-  font-family: 'DM Sans';
-  font-style: normal;
-  font-weight: 300;
-  font-size: 18px;
-  line-height: 150%;
-
-  color: var(--white-200);
-  padding-bottom: 48px;
   z-index: 2;
+  padding-bottom: 48px;
+
+  font-size: 18px;
+  font-weight: 300;
+  line-height: 150%;
+  color: var(--white-200);
 }
 
 .about-us span {
   font-style: italic;
   font-weight: 700;
 }
+
+/* Services */
 
 .services {
   display: flex;
@@ -219,48 +274,32 @@ nav li a {
   gap: 39px;
 }
 
-.services h1 {
-  font-family: 'Clash Display';
-  font-style: normal;
-  font-weight: 600;
-  font-size: 48px;
-  line-height: 59px;
-
-  background: var(--gradient-1);
-  -webkit-background-clip: text;
-  background-clip: text;
-  color: transparent;
-}
-
 .services-tabs {
   display: flex;
-  flex-direction: row;
   gap: 24px;
 }
 
 .services-tab {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 16px 24px;
+
   font-family: 'Clash Display';
-  font-style: normal;
-  font-weight: 600;
   font-size: 18px;
+  font-weight: 600;
   line-height: 24px;
 
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+  color: var(--white-100);
+  background: transparent;
   border: 1px solid;
   border-radius: 100px;
-  padding: 16px 24px;
   cursor: pointer;
-
-  color: var(--white-100);
-  background-color: rgba(0, 0, 0, 0);
 }
 
 .services-tab.is-active {
-  border-color: transparent;
   background: var(--gradient-2);
+  border-color: transparent;
 }
 
 .services-panel {
@@ -272,35 +311,31 @@ nav li a {
   display: block;
 }
 
-.services-panel h2 {
-  font-family: 'DM Sans';
-  font-style: normal;
-  font-weight: 700;
-  font-size: 24px;
-  line-height: 24px;
+.services-panel h3,
+.services-panel h4 {
   margin-bottom: 16px;
 
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 24px;
   color: var(--white-100);
 }
 
 .services-panel p {
-  font-family: 'DM Sans';
-  font-style: normal;
-  font-weight: 400;
-  font-size: 18px;
-  line-height: 150%;
   margin-bottom: 24px;
 
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 150%;
   color: var(--white-200);
 }
 
 .services-panel ul {
   margin: 0;
   padding-left: 24px;
-  font-family: 'DM Sans';
+
   font-size: 18px;
   line-height: 150%;
-
   color: var(--white-200);
 }
 
@@ -308,11 +343,13 @@ nav li a {
   margin-top: 8px;
 }
 
+/* Testimonial */
+
 .testimonial {
   display: flex;
-  justify-content: center;
   align-items: center;
   align-self: center;
+  justify-content: center;
   width: 925px;
   gap: 48px;
 }
@@ -322,40 +359,24 @@ nav li a {
   height: 32px;
 }
 
-.testimonial h1 {
-  font-family: 'Clash Display';
-  font-style: normal;
-  font-weight: 600;
-  font-size: 48px;
-  line-height: 59px;
+.testimonial .section-title {
   margin-bottom: 36px;
-
-  background: var(--gradient-1);
-  -webkit-background-clip: text;
-  background-clip: text;
-  color: transparent;
 }
 
-.testimonial h2 {
-  font-family: 'DM Sans';
-  font-style: normal;
-  font-weight: 800;
-  font-size: 24px;
-  line-height: 31px;
+.testimonial h3 {
   margin-bottom: 16px;
 
+  font-size: 24px;
+  font-weight: 800;
+  line-height: 31px;
   color: var(--white-100);
 }
 
 .testimonial p {
-font-family: 'DM Sans';
-font-style: normal;
-font-weight: 400;
-font-size: 18px;
-line-height: 150%;
-
-color: var(--white-200);
-
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 150%;
+  color: var(--white-200);
 }
 
 .testimonial-img {
@@ -363,42 +384,176 @@ color: var(--white-200);
   height: 495px;
 }
 
+/* Join Us */
+
 .join-us {
   display: flex;
   flex-direction: column;
-  justify-content: center;
   align-items: center;
+  justify-content: center;
+
+  color: var(--white-100);
 }
 
-.join-us h1 {
-  font-family: 'Clash Display';
-  font-style: normal;
-  font-weight: 600;
-  font-size: 48px;
-  line-height: 59px;
+.join-us form {
+  width: 100%;
+  max-width: 724px;
+}
 
-  background: var(--gradient-1);
+.join-subtitle {
+  margin-bottom: 24px;
+
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 24px;
+  text-align: left;
+  color: var(--white-100);
+}
+
+.packages {
+  display: flex;
+  align-items: stretch;
+  gap: 24px;
+  width: 100%;
+}
+
+.package {
+  position: relative;
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  padding: 32px;
+  border-radius: 4px;
+  cursor: pointer;
+
+  background: var(--black-200);
+}
+
+.package__input {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+.package:has(.package__input:focus-visible) {
+  outline: 2px solid var(--white-100);
+  outline-offset: 3px;
+}
+
+.package.is-selected {
+  background: var(--gradient-2);
+}
+
+.package__head h3 {
+  font-size: 24px;
+  font-weight: 800;
+  line-height: 31px;
+  color: var(--white-100);
+}
+
+.package .price {
+  font-size: 40px;
+  font-weight: 800;
+  line-height: 52px;
+  color: var(--white-100);
+}
+
+.package__head p {
+  padding-bottom: 40px;
+
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 21px;
+  color: var(--white-100);
+}
+
+.package__head span {
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 21px;
+}
+
+.package__body {
+  flex: 1;
+}
+
+.package__body h4 {
+  margin-bottom: 8px;
+
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 21px;
+  color: var(--white-100);
+}
+
+.benefit-list {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.benefit-list li {
+  position: relative;
+  padding-left: 26px;
+
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 150%;
+  color: var(--white-200);
+}
+
+.benefit-list li::before {
+  content: '';
+  position: absolute;
+  top: 2px;
+  left: 0;
+  width: 18px;
+  height: 18px;
+
+  background-image: url('./logo/benefit-list.svg');
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+.package-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  width: 100%;
+  margin-top: 24px;
+  padding: 16px;
+
+  font-size: 16px;
+  font-weight: 700;
+  color: var(--white-100);
+
+  background:
+    linear-gradient(var(--black-200), var(--black-200)) padding-box,
+    var(--gradient-2) border-box;
+  border: 1px solid transparent;
+}
+
+.package.is-selected .benefit-list li {
+  color: var(--white-100);
+}
+
+.package.is-selected .package-btn {
+  background: var(--white-100);
+  border-color: transparent;
+}
+
+.package.is-selected .package-btn__label {
+  background: var(--gradient-2);
   -webkit-background-clip: text;
   background-clip: text;
   color: transparent;
-}
-
-.join-us h2 {
-  
-}
-
-@font-face {
-  font-family: 'Clash Display';
-  src: url('./fonts/clash-display/clash-display-variable.woff2') format('woff2');
-  font-weight: 200 700;
-  font-style: normal;
-  font-display: swap;
-}
-
-@font-face {
-  font-family: 'DM Sans';
-  src: url('./fonts/dm-sans/dm-sans-variable.woff2') format('woff2');
-  font-weight: 100 1000;
-  font-style: normal;
-  font-display: swap;
 }

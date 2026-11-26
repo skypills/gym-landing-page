@@ -3,33 +3,35 @@
 <head>
   <meta charset='UTF-8'>
   <meta name='viewport' content='width=device-width, initial-scale=1.0'>
-  <title>Gym Landing Page</title>
+  <meta name='description' content='Gymnis — fitness training, modern equipment and flexible membership packages.'>
+  <title>Gymnis — Transform Your Body, Elevate Your Life</title>
+
+  <link rel='preload' href='./fonts/clash-display/clash-display-variable.woff2' as='font' type='font/woff2' crossorigin>
+  <link rel='preload' href='./fonts/dm-sans/dm-sans-variable.woff2' as='font' type='font/woff2' crossorigin>
   <link rel='stylesheet' href='style.css'>
 </head>
 <body>
 
-<!-- Header -->
 <header>
-  <nav>
-    <ul>
-      <img src='./logo/house.svg' alt=''>
-      <li><a class='home-link' href='#'>Home</a></li>
-      <img src='./logo/text-input.svg' alt=''>
-      <li><a href='#'>About Us</a></li>
-      <img src='./logo/text-input.svg' alt=''>
-      <li><a href='#'>Services</a></li>
-      <img src='./logo/text-input.svg' alt=''>
-      <li><a href='#'>Testimonial</a></li>
-      <img src='./logo/text-input.svg' alt=''>
-      <li><a href='#'>Join Us</a></li>
+  <nav aria-label='Main navigation'>
+    <ul class='nav-list'>
+      <li class='nav-item'>
+        <a class='nav-link home-link' href='#home'>
+          <img class='nav-icon' src='./logo/house.svg' alt=''>
+          Home
+        </a>
+      </li>
+      <li class='nav-item'><a class='nav-link' href='#about-us'>About Us</a></li>
+      <li class='nav-item'><a class='nav-link' href='#services'>Services</a></li>
+      <li class='nav-item'><a class='nav-link' href='#testimonial'>Testimonial</a></li>
+      <li class='nav-item'><a class='nav-link' href='#join-us'>Join Us</a></li>
     </ul>
   </nav>
 </header>
 
-
 <main>
-  <!-- Hero Section -->
-  <section class='hero'>
+  <!-- Hero -->
+  <section class='hero' id='home'>
     <div class='hero-imgs'>
       <img class='hero-img hero-img--left' src='./img/back-hero.png' alt=''>
       <img class='hero-img hero-img--right' src='./img/back-hero.png' alt=''>
@@ -41,48 +43,48 @@
     <p>Start your fitness journey today with personalized<br>
       training, modern equipment, and cheap plans.</p>
 
-    <div class='btn-container'>
-      <button class='btn-services'>Our Services</button>
-      <button class='btn-packages'>
-      <img src='./logo/barbel-fill.svg' alt=''>
+    <div class='hero__actions'>
+      <a class='btn btn--outline' href='#services'>Our Services</a>
+      <a class='btn btn--gradient' href='#join-us'>
+        <img src='./logo/barbel-fill.svg' alt=''>
         See Package
-      </button>
+      </a>
     </div>
   </section>
 
   <!-- About Us -->
-  <section class='about-us'>
+  <section class='about-us' id='about-us'>
     <img src='./img/about-us.png' alt=''>
-    <h1>About Us</h1>
-    <p>Welcome to Gymnis, where fitness meets passion. Our gym offers 
+    <h2 class='section-title'>About Us</h2>
+    <p>Welcome to Gymnis, where fitness meets passion. Our gym offers
       everything you need to <span>reach</span><br>
-      <span>your goals</span>, whether you're a <span>beginner</span> or a 
+      <span>your goals</span>, whether you're a <span>beginner</span> or a
       <span>seasoned athlete</span>. From expert trainers to cutting-edge<br>
-      equipment, we’ve got 
+      equipment, we’ve got
       you covered.</p>
   </section>
 
   <!-- Services -->
   <section class='services' id='services'>
-    <h1>Our Services</h1>
+    <h2 class='section-title'>Our Services</h2>
 
-    <div class="services-tabs">
-      <button class="services-tab is-active" data-tab="personal">Personal Training</button>
-      <button class="services-tab" data-tab="group">Group Classes</button>
-      <button class="services-tab" data-tab="cardio">Cardio &amp; Strength Zones</button>
-      <button class="services-tab" data-tab="nutrition">Nutrition Coaching</button>
+    <div class='services-tabs' role='tablist' aria-label='Our services'>
+      <button class='services-tab is-active' id='tab-personal' role='tab' aria-selected='true' aria-controls='personal' data-tab='personal' type='button'>Personal Training</button>
+      <button class='services-tab' id='tab-group' role='tab' aria-selected='false' aria-controls='group' data-tab='group' tabindex='-1' type='button'>Group Classes</button>
+      <button class='services-tab' id='tab-cardio' role='tab' aria-selected='false' aria-controls='cardio' data-tab='cardio' tabindex='-1' type='button'>Cardio &amp; Strength Zones</button>
+      <button class='services-tab' id='tab-nutrition' role='tab' aria-selected='false' aria-controls='nutrition' data-tab='nutrition' tabindex='-1' type='button'>Nutrition Coaching</button>
     </div>
 
-    <div class="services-panels">
-      <div class="services-panel is-active" id="personal">
-        <h2>🏋🏻Personal Training</h2>
+    <div class='services-panels'>
+      <div class='services-panel is-active' id='personal' role='tabpanel' aria-labelledby='tab-personal' tabindex='0'>
+        <h3>🏋🏻Personal Training</h3>
         <p>Achieve your fitness goals faster with one-on-one guidance
           from our certified personal trainers. Each session is customized
           to fit your unique needs, whether you want to lose weight, build
           muscle, or improve overall health. Our trainers will create a tailored
           workout plan, provide motivation, and ensure you’re using proper form
           to maximize results safely and effectively.</p>
-        <h2>🏆Benefits Of Personal Training:</h2>
+        <h4>🏆Benefits Of Personal Training:</h4>
         <ul>
           <li>Customized Workouts: Plans that match your fitness level and goals.</li>
           <li>Expert Guidance: Learn proper techniques and form to avoid injury.</li>
@@ -91,15 +93,15 @@
         </ul>
       </div>
 
-      <div class="services-panel" id="group">
-        <h2>👥Group Classes</h2>
+      <div class='services-panel' id='group' role='tabpanel' aria-labelledby='tab-group' tabindex='0'>
+        <h3>👥Group Classes</h3>
         <p>Train with energy and accountability in our group classes. From
           high-intensity interval training to strength and mobility sessions,
           every class is led by certified coaches who keep the pace challenging
           and the atmosphere motivating. Whether you're new to fitness or pushing
           for a new personal best, you'll find a class that fits your level and
           schedule.</p>
-        <h2>🏆Benefits Of Group Classes:</h2>
+        <h4>🏆Benefits Of Group Classes:</h4>
         <ul>
           <li>Motivating Atmosphere: Train alongside others who push you to give your best.</li>
           <li>Expert-Led Sessions: Coaches guide every workout with clear, safe instruction.</li>
@@ -108,14 +110,14 @@
         </ul>
       </div>
 
-      <div class="services-panel" id="cardio">
-        <h2>❤️‍🔥Cardio &amp; Strength Zones</h2>
+      <div class='services-panel' id='cardio' role='tabpanel' aria-labelledby='tab-cardio' tabindex='0'>
+        <h3>❤️‍🔥Cardio &amp; Strength Zones</h3>
         <p>Get the best of both worlds with dedicated cardio and strength zones.
           Our facility is equipped with modern machines, free weights, and
           functional training gear, giving you everything you need to build
           endurance, power, and lean muscle. Train at your own pace or follow a
           structured plan designed by our coaches.</p>
-        <h2>🏆Benefits Of Cardio &amp; Strength Zones:</h2>
+        <h4>🏆Benefits Of Cardio &amp; Strength Zones:</h4>
         <ul>
           <li>Complete Equipment: Cardio machines and strength gear for every training style.</li>
           <li>Balanced Training: Combine endurance and resistance work in one session.</li>
@@ -124,14 +126,14 @@
         </ul>
       </div>
 
-      <div class="services-panel" id="nutrition">
-        <h2>🥗Nutrition Coaching</h2>
+      <div class='services-panel' id='nutrition' role='tabpanel' aria-labelledby='tab-nutrition' tabindex='0'>
+        <h3>🥗Nutrition Coaching</h3>
         <p>Fuel your progress with personalized nutrition coaching. Our
           specialists build practical meal plans around your goals, lifestyle,
           and preferences, so you can lose fat, build muscle, or simply eat
           healthier without restrictive diets. You'll learn sustainable habits
           that support your training and last long after your program ends.</p>
-        <h2>🏆Benefits Of Nutrition Coaching:</h2>
+        <h4>🏆Benefits Of Nutrition Coaching:</h4>
         <ul>
           <li>Personalized Plans: Nutrition tailored to your body, goals, and schedule.</li>
           <li>Sustainable Habits: Learn to eat well without extreme or restrictive diets.</li>
@@ -143,49 +145,80 @@
   </section>
 
   <!-- Testimonial -->
-  <section class="testimonial">
-    <div class="text">
-      <img class="testimonial-svg" src="./logo/testimonial.svg" alt=''>
-      <h1>Testimonial</h1>
-      <h2>Life-Changing Results & Unmatched Support at Gymnis</h2>
-      <p>Since joining Gymnis, my entire approach to fitness has 
-        transformed; not only have I lost 15 pounds and gained 
-        noticeable muscle definition, but the supportive community, 
-        knowledgeable trainers, and wide range of equipment have kept 
-        me motivated and excited to push myself further every day—I’ve 
-        never felt more confident, energized, and strong in my life, and 
-        I can’t recommend this gym enough for anyone looking to make a 
+  <section class='testimonial' id='testimonial'>
+    <div class='testimonial__text'>
+      <img class='testimonial-svg' src='./logo/testimonial.svg' alt=''>
+      <h2 class='section-title'>Testimonial</h2>
+      <h3>Life-Changing Results &amp; Unmatched Support at Gymnis</h3>
+      <p>Since joining Gymnis, my entire approach to fitness has
+        transformed; not only have I lost 15 pounds and gained
+        noticeable muscle definition, but the supportive community,
+        knowledgeable trainers, and wide range of equipment have kept
+        me motivated and excited to push myself further every day—I’ve
+        never felt more confident, energized, and strong in my life, and
+        I can’t recommend this gym enough for anyone looking to make a
         real, lasting change</p>
     </div>
-    <img class="testimonial-img" src="./img/testimonial.png" alt=''>
+    <img class='testimonial-img' src='./img/testimonial.png' alt=''>
   </section>
 
   <!-- Join Us -->
-  <section class="join-us">
-    <h1>Join Us</h1>
+  <section class='join-us' id='join-us'>
+    <h2 class='section-title'>Join Us</h2>
     <form>
-      <ol>
-        <li>Select Your Package</li>
-        <div class="packegaes">
-          <div class="package">
-            <h2>Monthly</h2>
-            <span class="price">$15</span>
+      <h3 class='join-subtitle'>1. Select Your Package</h3>
+
+      <div class='packages' role='radiogroup' aria-label='Select your package'>
+        <label class='package'>
+          <input class='package__input' type='radio' name='package' value='monthly'>
+          <div class='package__head'>
+            <h3>Monthly</h3>
+            <span class='price'>$15</span>
             <p>
               <span>Auto-renewal</span>, cancel anytime
             </p>
-
-            <h3></h3>
           </div>
 
-          <div class="package select"></div>
-        </div>
-      </ol>
+          <div class='package__body'>
+            <h4>Benefit:</h4>
+            <ul class='benefit-list'>
+              <li>Access to Professional Guidance</li>
+              <li>Variety of Equipment</li>
+              <li>Functional Training Areas</li>
+              <li>Positive Atmosphere</li>
+            </ul>
+          </div>
+          <span class='package-btn'><span class='package-btn__label'>Get This Package</span></span>
+        </label>
+
+        <label class='package is-selected'>
+          <input class='package__input' type='radio' name='package' value='yearly' checked>
+          <div class='package__head'>
+            <h3>Yearly</h3>
+            <span class='price'>$100</span>
+            <p>
+              <span>Great choice</span>, you save $30
+            </p>
+          </div>
+
+          <div class='package__body'>
+            <h4>Benefit:</h4>
+            <ul class='benefit-list'>
+              <li>Access to Professional Guidance</li>
+              <li>Variety of Equipment</li>
+              <li>Structured Workouts</li>
+              <li>Free 50+ Sport Class</li>
+              <li>Healthy Habits Formation Strategy</li>
+              <li>24 Hour Group Support</li>
+            </ul>
+          </div>
+          <span class='package-btn'><span class='package-btn__label'>Package Selected</span></span>
+        </label>
+      </div>
     </form>
   </section>
 </main>
 
-<footer></footer>
-
-<script src="./script.js"></script>
+<script src='./script.js'></script>
 </body>
 </html>
