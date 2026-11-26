@@ -8,6 +8,7 @@
 </head>
 <body>
 
+<!-- Header -->
 <header>
   <nav>
     <ul>
@@ -29,37 +30,139 @@
 <main>
   <!-- Hero Section -->
   <section class='hero'>
-    <img class='hero-img hero-img--left' src='./img/back-hero.png' alt=''>
-    <img class='hero-img hero-img--right' src='./img/back-hero.png' alt=''>
-    <img class='hero-img hero-img--top' src='./img/main-hero.png' alt=''>
-  </section>
+    <div class='hero-imgs'>
+      <img class='hero-img hero-img--left' src='./img/back-hero.png' alt=''>
+      <img class='hero-img hero-img--right' src='./img/back-hero.png' alt=''>
+      <img class='hero-img hero-img--top' src='./img/main-hero.png' alt=''>
+    </div>
 
-  <!-- Title Section -->
-  <section class='title'>
     <h1>Transform Your Body,<br>
       Elevate Your Life.</h1>
     <p>Start your fitness journey today with personalized<br>
       training, modern equipment, and cheap plans.</p>
 
     <div class='btn-container'>
-        <button class='btn-services'>Our Services</button>
-        <button class='btn-packages'>
-          <img src='./logo/barbel-fill.svg' alt=''>
-          See Package
-        </button>
+      <button class='btn-services'>Our Services</button>
+      <button class='btn-packages'>
+      <img src='./logo/barbel-fill.svg' alt=''>
+        See Package
+      </button>
     </div>
   </section>
-</main>
 
-<footer></footer>
+  <!-- About Us -->
+  <section class='about-us'>
+    <img src='./img/about-us.png' alt=''>
+    <h1>About Us</h1>
+    <p>Welcome to Gymnis, where fitness meets passion. Our gym offers 
+      everything you need to <span>reach</span><br>
+      <span>your goals</span>, whether you're a <span>beginner</span> or a 
+      <span>seasoned athlete</span>. From expert trainers to cutting-edge<br>
+      equipment, we’ve got 
+      you covered.</p>
+  </section>
 
-</body>
-</html>
+  <!-- Services -->
+  <section class='services' id='services'>
+    <h1>Our Services</h1>
 
+    <div class="services-tabs">
+      <button class="services-tab is-active" data-tab="personal">Personal Training</button>
+      <button class="services-tab" data-tab="group">Group Classes</button>
+      <button class="services-tab" data-tab="cardio">Cardio &amp; Strength Zones</button>
+      <button class="services-tab" data-tab="nutrition">Nutrition Coaching</button>
+    </div>
+
+    <div class="services-panels">
+      <div class="services-panel is-active" id="personal">
+        <h2>🏋🏻Personal Training</h2>
+        <p>Achieve your fitness goals faster with one-on-one guidance
+          from our certified personal trainers. Each session is customized
+          to fit your unique needs, whether you want to lose weight, build
+          muscle, or improve overall health. Our trainers will create a tailored
+          workout plan, provide motivation, and ensure you’re using proper form
+          to maximize results safely and effectively.</p>
+        <h2>🏆Benefits Of Personal Training:</h2>
+        <ul>
+          <li>Customized Workouts: Plans that match your fitness level and goals.</li>
+          <li>Expert Guidance: Learn proper techniques and form to avoid injury.</li>
+          <li>Motivation &amp; Support: Stay on track with professional coaching.</li>
+          <li>Progress Tracking: Regular assessments to measure improvements.</li>
+        </ul>
+      </div>
+
+      <div class="services-panel" id="group">
+        <h2>👥Group Classes</h2>
+        <p>Train with energy and accountability in our group classes. From
+          high-intensity interval training to strength and mobility sessions,
+          every class is led by certified coaches who keep the pace challenging
+          and the atmosphere motivating. Whether you're new to fitness or pushing
+          for a new personal best, you'll find a class that fits your level and
+          schedule.</p>
+        <h2>🏆Benefits Of Group Classes:</h2>
+        <ul>
+          <li>Motivating Atmosphere: Train alongside others who push you to give your best.</li>
+          <li>Expert-Led Sessions: Coaches guide every workout with clear, safe instruction.</li>
+          <li>Variety &amp; Flexibility: Different class styles keep training fresh and effective.</li>
+          <li>Community &amp; Accountability: Build habits and friendships that keep you consistent.</li>
+        </ul>
+      </div>
+
+      <div class="services-panel" id="cardio">
+        <h2>❤️‍🔥Cardio &amp; Strength Zones</h2>
+        <p>Get the best of both worlds with dedicated cardio and strength zones.
+          Our facility is equipped with modern machines, free weights, and
+          functional training gear, giving you everything you need to build
+          endurance, power, and lean muscle. Train at your own pace or follow a
+          structured plan designed by our coaches.</p>
+        <h2>🏆Benefits Of Cardio &amp; Strength Zones:</h2>
+        <ul>
+          <li>Complete Equipment: Cardio machines and strength gear for every training style.</li>
+          <li>Balanced Training: Combine endurance and resistance work in one session.</li>
+          <li>Space To Focus: Comfortable, well-organized zones for smooth workouts.</li>
+          <li>Coach Support: Get guidance on form, programming, and progression.</li>
+        </ul>
+      </div>
+
+      <div class="services-panel" id="nutrition">
+        <h2>🥗Nutrition Coaching</h2>
+        <p>Fuel your progress with personalized nutrition coaching. Our
+          specialists build practical meal plans around your goals, lifestyle,
+          and preferences, so you can lose fat, build muscle, or simply eat
+          healthier without restrictive diets. You'll learn sustainable habits
+          that support your training and last long after your program ends.</p>
+        <h2>🏆Benefits Of Nutrition Coaching:</h2>
+        <ul>
+          <li>Personalized Plans: Nutrition tailored to your body, goals, and schedule.</li>
+          <li>Sustainable Habits: Learn to eat well without extreme or restrictive diets.</li>
+          <li>Better Performance: Proper fueling for energy, recovery, and results.</li>
+          <li>Ongoing Support: Regular check-ins and adjustments from your coach.</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- Testimonial -->
+  <section class="testimonial">
+    <div class="text">
+      <img class="testimonial-svg" src="./logo/testimonial.svg" alt=''>
+      <h1>Testimonial</h1>
+      <h2>Life-Changing Results & Unmatched Support at Gymnis</h2>
+      <p>Since joining Gymnis, my entire approach to fitness has 
+        transformed; not only have I lost 15 pounds and gained 
+        noticeable muscle definition, but the supportive community, 
+        knowledgeable trainers, and wide range of equipment have kept 
+        me motivated and excited to push myself further every day—I’ve 
+        never felt more confident, energized, and strong in my life, and 
+        I can’t recommend this gym enough for anyone looking to make a 
+        real, lasting change</p>
+    </div>
+    <img class="testimonial-img" src="./img/testimonial.png" alt=''>
   </section>
 </main>
 
 <footer></footer>
 
+<script src="./script.js"></script>
 </body>
 </html>

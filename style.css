@@ -15,26 +15,31 @@
 
 body {
   font-family: 'DM Sans', system-ui, sans-serif;
-  background-color: var(--black-100);
   overflow-x: hidden;
   display: flex;
   flex-direction: column;
+
+  background-color: var(--black-100);
 }
 
 main{
+  display: flex;
+  flex-direction: column;
   flex: 1;
   min-height: 0;
-  padding-top: 128px;
+  gap: 100px;
+  padding-top: 80px;
 }
 
 header {
   justify-content: center;
   align-items: center;
   font-family: 'Clash Display';
-  color: var(--white-100);
   font-size: 24px;
   padding: 0 48px;
   margin-top: 24px;
+
+  color: var(--white-100);
 }
 nav ul {
   display: flex;
@@ -56,8 +61,13 @@ nav li a {
 
 .hero {
   position: relative;
+}
+
+.hero-imgs {
+  position: relative;
   height: 70vh;
   overflow: hidden;
+  margin-bottom: 48px;
 }
 
 .hero-img {
@@ -71,7 +81,7 @@ nav li a {
 
 .hero-img--left {
   left: 0;
-  height: 72%;
+  height: 80%;
   z-index: 1;
 }
 
@@ -83,18 +93,17 @@ nav li a {
 
 .hero-img--top {
   left: 50%;
-  height: 80%;
+  height: 100%;
   z-index: 2;
   transform: translate(-50%, -50%);
 }
 
-.title h1 {
+.hero h1 {
   font-family: 'Clash Display';
   font-size: 64px;
   text-align: center;
   font-weight: 600;
   line-height: 79px;
-  margin-top: 48px;
 
   background: var(--gradient-1);
   -webkit-background-clip: text;
@@ -102,7 +111,7 @@ nav li a {
   color: transparent;
 }
 
-.title p {
+.hero p {
   font-family: 'DM Sans';
   font-size: 24px;
   font-weight: 400;
@@ -134,6 +143,7 @@ nav li a {
 
 .btn-services {
   font-weight: 500;
+
   color: var(--white-100);
   background: 
     linear-gradient(var(--black-100), var(--black-100)) padding-box,
@@ -149,6 +159,209 @@ nav li a {
 .btn-packages img {
   margin-right: 8px;
   vertical-align: middle;
+}
+
+.about-us {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+}
+
+.about-us img {
+  position: relative;
+  width: 925px;
+  height: 618px;
+
+  -webkit-mask-image: linear-gradient(to bottom, #010101 60%, transparent 100%);
+  mask-image: linear-gradient(to bottom, #010101 60%, transparent 100%);
+}
+
+.about-us h1 {
+  position: absolute;
+  font-family: 'Clash Display';
+  font-style: normal;
+  font-weight: 600;
+  font-size: 48px;
+  line-height: 59px;
+  bottom: 135px;
+  left: 528px;
+
+  background: var(--gradient-1);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  z-index: 2;
+}
+
+.about-us p {
+  position: absolute;
+  font-family: 'DM Sans';
+  font-style: normal;
+  font-weight: 300;
+  font-size: 18px;
+  line-height: 150%;
+
+  color: var(--white-200);
+  padding-bottom: 48px;
+  z-index: 2;
+}
+
+.about-us span {
+  font-style: italic;
+  font-weight: 700;
+}
+
+.services {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 39px;
+}
+
+.services h1 {
+  font-family: 'Clash Display';
+  font-style: normal;
+  font-weight: 600;
+  font-size: 48px;
+  line-height: 59px;
+
+  background: var(--gradient-1);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.services-tabs {
+  display: flex;
+  flex-direction: row;
+  gap: 24px;
+}
+
+.services-tab {
+  font-family: 'Clash Display';
+  font-style: normal;
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 24px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid;
+  border-radius: 100px;
+  padding: 16px 24px;
+  cursor: pointer;
+
+  color: var(--white-100);
+  background-color: rgba(0, 0, 0, 0);
+}
+
+.services-tab.is-active {
+  border-color: transparent;
+  background: var(--gradient-2);
+}
+
+.services-panel {
+  display: none;
+  max-width: 960px;
+}
+
+.services-panel.is-active {
+  display: block;
+}
+
+.services-panel h2 {
+  font-family: 'DM Sans';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 24px;
+  margin-bottom: 16px;
+
+  color: var(--white-100);
+}
+
+.services-panel p {
+  font-family: 'DM Sans';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 150%;
+  margin-bottom: 24px;
+
+  color: var(--white-200);
+}
+
+.services-panel ul {
+  margin: 0;
+  padding-left: 24px;
+  font-family: 'DM Sans';
+  font-size: 18px;
+  line-height: 150%;
+
+  color: var(--white-200);
+}
+
+.services-panel li + li {
+  margin-top: 8px;
+}
+
+.testimonial {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 925px;
+}
+
+.testimonial.text {
+  margin-right: 48px;
+}
+
+.testimonial-svg {
+  width: 40px;
+  height: 32px;
+}
+
+.testimonial h1 {
+  font-family: 'Clash Display';
+  font-style: normal;
+  font-weight: 600;
+  font-size: 48px;
+  line-height: 59px;
+  margin-bottom: 36px;
+
+  background: var(--gradient-1);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.testimonial h2 {
+  font-family: 'DM Sans';
+  font-style: normal;
+  font-weight: 800;
+  font-size: 24px;
+  line-height: 31px;
+
+  color: var(--white-100);
+}
+
+.testimonial p {
+font-family: 'DM Sans';
+font-style: normal;
+font-weight: 400;
+font-size: 18px;
+line-height: 150%;
+
+color: var(--white-200);
+
+}
+
+.testimonial-img {
+  width: 384px;
+  height: 495px;
 }
 
 @font-face {
