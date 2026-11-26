@@ -363,6 +363,30 @@ color: var(--white-200);
   height: 495px;
 }
 
+.join-us {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.join-us h1 {
+  font-family: 'Clash Display';
+  font-style: normal;
+  font-weight: 600;
+  font-size: 48px;
+  line-height: 59px;
+
+  background: var(--gradient-1);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.join-us h2 {
+  
+}
+
 @font-face {
   font-family: 'Clash Display';
   src: url('./fonts/clash-display/clash-display-variable.woff2') format('woff2');
