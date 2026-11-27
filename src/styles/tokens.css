@@ -1,0 +1,24 @@
+:root {
+  --white-100: #FFFFFF;
+  --white-200: #F4F4F4;
+  --black-100: #010101;
+  --black-200: #18181B;
+  --gradient-1: linear-gradient(27deg, #6DDCFF 0%, #7F60F9 100%);
+  --gradient-2: linear-gradient(90deg, #07C1FC 0%, #7F60F9 100%);
+}
+
+@font-face {
+  font-family: 'Clash Display';
+  src: url('../assets/fonts/clash-display/clash-display-variable.woff2') format('woff2');
+  font-weight: 200 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'DM Sans';
+  src: url('../assets/fonts/dm-sans/dm-sans-variable.woff2') format('woff2');
+  font-weight: 100 1000;
+  font-style: normal;
+  font-display: swap;
+}

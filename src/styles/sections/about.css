@@ -1,0 +1,38 @@
+.about-us {
+  position: relative;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+}
+
+.about-us img {
+  position: relative;
+  width: 925px;
+  height: 618px;
+
+  -webkit-mask-image: linear-gradient(to bottom, #010101 60%, transparent 100%);
+  mask-image: linear-gradient(to bottom, #010101 60%, transparent 100%);
+}
+
+.about-us .section-title {
+  position: absolute;
+  bottom: 135px;
+  left: 528px;
+  z-index: 2;
+}
+
+.about-us p {
+  position: absolute;
+  z-index: 2;
+  padding-bottom: 48px;
+
+  font-size: 18px;
+  font-weight: 300;
+  line-height: 150%;
+  color: var(--white-200);
+}
+
+.about-us span {
+  font-style: italic;
+  font-weight: 700;
+}

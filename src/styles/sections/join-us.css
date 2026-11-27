@@ -1,0 +1,23 @@
+.join-us {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  color: var(--white-100);
+}
+
+.join-us form {
+  width: 100%;
+  max-width: 724px;
+}
+
+.join-subtitle {
+  margin-bottom: 24px;
+
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 24px;
+  text-align: left;
+  color: var(--white-100);
+}

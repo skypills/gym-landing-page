@@ -6,9 +6,9 @@
   <meta name='description' content='Gymnis — fitness training, modern equipment and flexible membership packages.'>
   <title>Gymnis — Transform Your Body, Elevate Your Life</title>
 
-  <link rel='preload' href='./fonts/clash-display/clash-display-variable.woff2' as='font' type='font/woff2' crossorigin>
-  <link rel='preload' href='./fonts/dm-sans/dm-sans-variable.woff2' as='font' type='font/woff2' crossorigin>
-  <link rel='stylesheet' href='style.css'>
+  <link rel='preload' href='./src/assets/fonts/clash-display/clash-display-variable.woff2' as='font' type='font/woff2' crossorigin>
+  <link rel='preload' href='./src/assets/fonts/dm-sans/dm-sans-variable.woff2' as='font' type='font/woff2' crossorigin>
+  <link rel='stylesheet' href='./src/styles/main.css'>
 </head>
 <body>
 
@@ -17,7 +17,7 @@
     <ul class='nav-list'>
       <li class='nav-item'>
         <a class='nav-link home-link' href='#home'>
-          <img class='nav-icon' src='./logo/house.svg' alt=''>
+          <img class='nav-icon' src='./src/assets/icons/house.svg' alt=''>
           Home
         </a>
       </li>
@@ -33,9 +33,9 @@
   <!-- Hero -->
   <section class='hero' id='home'>
     <div class='hero-imgs'>
-      <img class='hero-img hero-img--left' src='./img/back-hero.png' alt=''>
-      <img class='hero-img hero-img--right' src='./img/back-hero.png' alt=''>
-      <img class='hero-img hero-img--top' src='./img/main-hero.png' alt=''>
+      <img class='hero-img hero-img--left' src='./src/assets/images/back-hero.png' alt=''>
+      <img class='hero-img hero-img--right' src='./src/assets/images/back-hero.png' alt=''>
+      <img class='hero-img hero-img--top' src='./src/assets/images/main-hero.png' alt=''>
     </div>
 
     <h1>Transform Your Body,<br>
@@ -46,7 +46,7 @@
     <div class='hero__actions'>
       <a class='btn btn--outline' href='#services'>Our Services</a>
       <a class='btn btn--gradient' href='#join-us'>
-        <img src='./logo/barbel-fill.svg' alt=''>
+        <img src='./src/assets/icons/barbel-fill.svg' alt=''>
         See Package
       </a>
     </div>
@@ -54,7 +54,7 @@
 
   <!-- About Us -->
   <section class='about-us' id='about-us'>
-    <img src='./img/about-us.png' alt=''>
+    <img src='./src/assets/images/about-us.png' alt=''>
     <h2 class='section-title'>About Us</h2>
     <p>Welcome to Gymnis, where fitness meets passion. Our gym offers
       everything you need to <span>reach</span><br>
@@ -147,7 +147,7 @@
   <!-- Testimonial -->
   <section class='testimonial' id='testimonial'>
     <div class='testimonial__text'>
-      <img class='testimonial-svg' src='./logo/testimonial.svg' alt=''>
+      <img class='testimonial-svg' src='./src/assets/icons/testimonial.svg' alt=''>
       <h2 class='section-title'>Testimonial</h2>
       <h3>Life-Changing Results &amp; Unmatched Support at Gymnis</h3>
       <p>Since joining Gymnis, my entire approach to fitness has
@@ -159,7 +159,7 @@
         I can’t recommend this gym enough for anyone looking to make a
         real, lasting change</p>
     </div>
-    <img class='testimonial-img' src='./img/testimonial.png' alt=''>
+    <img class='testimonial-img' src='./src/assets/images/testimonial.png' alt=''>
   </section>
 
   <!-- Join Us -->
@@ -215,10 +215,12 @@
           <span class='package-btn'><span class='package-btn__label'>Package Selected</span></span>
         </label>
       </div>
+
+      <h3 class="join-subtitle">2. Select Payment Method</h3>
     </form>
   </section>
 </main>
 
-<script src='./script.js'></script>
+<script type='module' src='./src/js/main.js'></script>
 </body>
 </html>
