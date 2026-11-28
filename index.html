@@ -166,57 +166,112 @@
   <section class='join-us' id='join-us'>
     <h2 class='section-title'>Join Us</h2>
     <form>
-      <h3 class='join-subtitle'>1. Select Your Package</h3>
+      <fieldset>
+        <h3 class='join-subtitle'>1. Select Your Package</h3>
+        
+        <div class='packages' role='radiogroup' aria-label='Select your package'>
+          <label class='package'>
+            <input class='package__input' type='radio' name='package' value='monthly'>
+            <div class='package__head'>
+              <h3>Monthly</h3>
+              <span class='price'>$15</span>
+              <p>
+                <span>Auto-renewal</span>, cancel anytime
+              </p>
+            </div>
+            
+            <div class='package__body'>
+              <h4>Benefit:</h4>
+              <ul class='benefit-list'>
+                <li>Access to Professional Guidance</li>
+                <li>Variety of Equipment</li>
+                <li>Functional Training Areas</li>
+                <li>Positive Atmosphere</li>
+              </ul>
+            </div>
+            <span class='package-btn'><span class='package-btn__label'>Get This Package</span></span>
+          </label>
+          
+          <label class='package is-selected'>
+            <input class='package__input' type='radio' name='package' value='yearly' checked>
+            <div class='package__head'>
+              <h3>Yearly</h3>
+              <span class='price'>$100</span>
+              <p>
+                <span>Great choice</span>, you save <span>$30</span>
+              </p>
+            </div>
+            
+            <div class='package__body'>
+              <h4>Benefit:</h4>
+              <ul class='benefit-list'>
+                <li>Access to Professional Guidance</li>
+                <li>Variety of Equipment</li>
+                <li>Structured Workouts</li>
+                <li>Free 50+ Sport Class</li>
+                <li>Healthy Habits Formation Strategy</li>
+                <li>24 Hour Group Support</li>
+              </ul>
+            </div>
+            <span class='package-btn'><span class='package-btn__label'>Package Selected</span></span>
+          </label>
+        </div>
+      </fieldset>
 
-      <div class='packages' role='radiogroup' aria-label='Select your package'>
-        <label class='package'>
-          <input class='package__input' type='radio' name='package' value='monthly'>
-          <div class='package__head'>
-            <h3>Monthly</h3>
-            <span class='price'>$15</span>
-            <p>
-              <span>Auto-renewal</span>, cancel anytime
-            </p>
+      <fieldset>
+        <h3 class="join-subtitle">2. Select Payment Method</h3>
+        
+        <div class='payment-methods'>
+          <div class="payment-method">
+            <div class="payment-header">
+              <h4>Credit Card</h4>
+              <img src="./src/assets/icons/chevron-down.svg">
+            </div>
+            
+            <div class="payment-options">
+              <input type="radio" name="payment-method" value="visa-mastercard">
+              <label><img src="./src/assets/icons/visa-mastercard.svg"></label>
+            </div>
           </div>
-
-          <div class='package__body'>
-            <h4>Benefit:</h4>
-            <ul class='benefit-list'>
-              <li>Access to Professional Guidance</li>
-              <li>Variety of Equipment</li>
-              <li>Functional Training Areas</li>
-              <li>Positive Atmosphere</li>
-            </ul>
+          
+          <div class="payment-method">
+            <div class="payment-header">
+              <h4>E-Wallet</h4>
+              <img src="./src/assets/icons/chevron-down.svg">
+            </div>
+            
+            <div class="payment-options">
+              <input type="radio" name="payment-method" value="gopay">
+              <label><img src="./src/assets/icons/gopay.svg"></label>
+              
+              <input type="radio" name="payment-method" value="shopee-pay">
+              <label><img src="./src/assets/icons/shopee-pay.svg"></label>
+              
+              <input type="radio" name="payment-method" value="ovo">
+              <label><img src="./src/assets/icons/ovo.svg"></label>
+            </div>
           </div>
-          <span class='package-btn'><span class='package-btn__label'>Get This Package</span></span>
-        </label>
-
-        <label class='package is-selected'>
-          <input class='package__input' type='radio' name='package' value='yearly' checked>
-          <div class='package__head'>
-            <h3>Yearly</h3>
-            <span class='price'>$100</span>
-            <p>
-              <span>Great choice</span>, you save $30
-            </p>
+          
+          <div class="payment-method">
+            <div class="payment-header">
+              <h4>Bank Transfer</h4>
+              <img src="./src/assets/icons/chevron-down.svg">
+            </div>
+            
+            <div class="payment-options">
+              <input type="radio" name="payment-method" value="bca">
+              <label><img src="./src/assets/icons/bca.svg"></label>
+              
+              <input type="radio" name="payment-method" value="bni">
+              <label><img src="./src/assets/icons/bni.svg"></label>
+              
+              <input type="radio" name="payment-method" value="mandiri">
+              <label><img src="./src/assets/icons/mandiri.svg"></label>
+            </div>
           </div>
+        </div>
+      </fieldset>
 
-          <div class='package__body'>
-            <h4>Benefit:</h4>
-            <ul class='benefit-list'>
-              <li>Access to Professional Guidance</li>
-              <li>Variety of Equipment</li>
-              <li>Structured Workouts</li>
-              <li>Free 50+ Sport Class</li>
-              <li>Healthy Habits Formation Strategy</li>
-              <li>24 Hour Group Support</li>
-            </ul>
-          </div>
-          <span class='package-btn'><span class='package-btn__label'>Package Selected</span></span>
-        </label>
-      </div>
-
-      <h3 class="join-subtitle">2. Select Payment Method</h3>
     </form>
   </section>
 </main>

@@ -16,6 +16,8 @@ header {
   color: var(--white-100);
 }
 
+fieldset { border: none; }
+
 .nav-list {
   display: flex;
   align-items: center;
