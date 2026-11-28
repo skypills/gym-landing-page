@@ -16,8 +16,6 @@ header {
   color: var(--white-100);
 }
 
-fieldset { border: none; }
-
 .nav-list {
   display: flex;
   align-items: center;
@@ -57,4 +55,48 @@ fieldset { border: none; }
 
 .home-link {
   font-weight: 700;
+}
+
+footer {
+  width: min(1366px, calc(100% - 96px));
+  margin: 220px auto 0;
+
+  border-radius: 8px;
+  background: var(--black-200);
+}
+
+.footer-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 24px 48px;
+  gap: 24px;
+}
+
+.footer-label {
+  font-family: 'Clash Display';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 20px;
+
+  color: var(--white-100);
+}
+
+.footer-dot {
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+
+  background-color: var(--white-100);
+}
+
+.social-list {
+  display: flex;
+  list-style: none;
+  gap: 16px;
+}
+
+.social-list a {
+  display: flex;
 }

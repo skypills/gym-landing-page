@@ -5,6 +5,10 @@
   justify-content: center;
 }
 
+.about-us picture {
+  display: block;
+}
+
 .about-us img {
   position: relative;
   width: 925px;

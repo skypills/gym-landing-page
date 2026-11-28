@@ -4,20 +4,53 @@
   <meta charset='UTF-8'>
   <meta name='viewport' content='width=device-width, initial-scale=1.0'>
   <meta name='description' content='Gymnis — fitness training, modern equipment and flexible membership packages.'>
+  <meta name='theme-color' content='#010101'>
   <title>Gymnis — Transform Your Body, Elevate Your Life</title>
 
-  <link rel='preload' href='./src/assets/fonts/clash-display/clash-display-variable.woff2' as='font' type='font/woff2' crossorigin>
-  <link rel='preload' href='./src/assets/fonts/dm-sans/dm-sans-variable.woff2' as='font' type='font/woff2' crossorigin>
+  <link rel='canonical' href='./'>
+  <link rel='icon' href='./src/assets/icons/house.svg' type='image/svg+xml'>
+
+  <meta property='og:type' content='website'>
+  <meta property='og:site_name' content='Gymnis'>
+  <meta property='og:title' content='Gymnis — Transform Your Body, Elevate Your Life'>
+  <meta property='og:description' content='Fitness training, modern equipment and flexible membership packages.'>
+  <meta property='og:image' content='./src/assets/images/og-image.jpg'>
+  <meta property='og:image:width' content='1200'>
+  <meta property='og:image:height' content='630'>
+  <meta property='og:image:type' content='image/jpeg'>
+  <meta property='og:image:alt' content='Athlete lifting a barbell at Gymnis'>
+  <meta property='og:locale' content='en_US'>
+
+  <meta name='twitter:card' content='summary_large_image'>
+  <meta name='twitter:title' content='Gymnis — Transform Your Body, Elevate Your Life'>
+  <meta name='twitter:description' content='Fitness training, modern equipment and flexible membership packages.'>
+  <meta name='twitter:image' content='./src/assets/images/og-image.jpg'>
+
+  <link rel='preload' href='./src/assets/fonts/clash-display/clash-display-variable.woff2' as='font' type='font/woff2' crossorigin='anonymous'>
+  <link rel='preload' href='./src/assets/fonts/dm-sans/dm-sans-variable.woff2' as='font' type='font/woff2' crossorigin='anonymous'>
+  <link rel='preload' href='./src/assets/images/main-hero-840.avif' as='image' type='image/avif' imagesrcset='./src/assets/images/main-hero-840.avif 1x, ./src/assets/images/main-hero-1332.avif 2x' fetchpriority='high'>
   <link rel='stylesheet' href='./src/styles/main.css'>
+
+  <script type='application/ld+json'>
+    {
+      "@context": "https://schema.org",
+      "@type": "HealthClub",
+      "name": "Gymnis",
+      "description": "Fitness training, modern equipment and flexible membership packages.",
+      "priceRange": "$15-$100"
+    }
+  </script>
 </head>
 <body>
+
+<a class='skip-link' href='#main-content'>Skip to main content</a>
 
 <header>
   <nav aria-label='Main navigation'>
     <ul class='nav-list'>
       <li class='nav-item'>
         <a class='nav-link home-link' href='#home'>
-          <img class='nav-icon' src='./src/assets/icons/house.svg' alt=''>
+          <img class='nav-icon' src='./src/assets/icons/house.svg' alt='' width='24' height='25'>
           Home
         </a>
       </li>
@@ -29,13 +62,25 @@
   </nav>
 </header>
 
-<main>
+<main id='main-content'>
   <!-- Hero -->
   <section class='hero' id='home'>
     <div class='hero-imgs'>
-      <img class='hero-img hero-img--left' src='./src/assets/images/back-hero.png' alt=''>
-      <img class='hero-img hero-img--right' src='./src/assets/images/back-hero.png' alt=''>
-      <img class='hero-img hero-img--top' src='./src/assets/images/main-hero.png' alt=''>
+      <picture>
+        <source type='image/avif' srcset='./src/assets/images/back-hero-840.avif 1x, ./src/assets/images/back-hero-1334.avif 2x'>
+        <source type='image/webp' srcset='./src/assets/images/back-hero-840.webp 1x, ./src/assets/images/back-hero-1334.webp 2x'>
+        <img class='hero-img hero-img--left' src='./src/assets/images/back-hero-840.webp' alt='' width='840' height='504' decoding='async'>
+      </picture>
+      <picture>
+        <source type='image/avif' srcset='./src/assets/images/back-hero-840.avif 1x, ./src/assets/images/back-hero-1334.avif 2x'>
+        <source type='image/webp' srcset='./src/assets/images/back-hero-840.webp 1x, ./src/assets/images/back-hero-1334.webp 2x'>
+        <img class='hero-img hero-img--right' src='./src/assets/images/back-hero-840.webp' alt='' width='840' height='504' decoding='async'>
+      </picture>
+      <picture>
+        <source type='image/avif' srcset='./src/assets/images/main-hero-840.avif 1x, ./src/assets/images/main-hero-1332.avif 2x'>
+        <source type='image/webp' srcset='./src/assets/images/main-hero-840.webp 1x, ./src/assets/images/main-hero-1332.webp 2x'>
+        <img class='hero-img hero-img--top' src='./src/assets/images/main-hero-840.webp' alt='Athlete lifting a barbell' width='840' height='631' decoding='async' fetchpriority='high'>
+      </picture>
     </div>
 
     <h1>Transform Your Body,<br>
@@ -46,7 +91,7 @@
     <div class='hero__actions'>
       <a class='btn btn--outline' href='#services'>Our Services</a>
       <a class='btn btn--gradient' href='#join-us'>
-        <img src='./src/assets/icons/barbel-fill.svg' alt=''>
+        <img src='./src/assets/icons/barbel-fill.svg' alt='' width='32' height='32'>
         See Package
       </a>
     </div>
@@ -54,7 +99,11 @@
 
   <!-- About Us -->
   <section class='about-us' id='about-us'>
-    <img src='./src/assets/images/about-us.png' alt=''>
+    <picture>
+      <source type='image/avif' srcset='./src/assets/images/about-us-925.avif 1x, ./src/assets/images/about-us-1850.avif 2x'>
+      <source type='image/webp' srcset='./src/assets/images/about-us-925.webp 1x, ./src/assets/images/about-us-1850.webp 2x'>
+      <img src='./src/assets/images/about-us-925.webp' alt='Athlete training with a dumbbell' width='925' height='619' loading='lazy' decoding='async'>
+    </picture>
     <h2 class='section-title'>About Us</h2>
     <p>Welcome to Gymnis, where fitness meets passion. Our gym offers
       everything you need to <span>reach</span><br>
@@ -147,7 +196,7 @@
   <!-- Testimonial -->
   <section class='testimonial' id='testimonial'>
     <div class='testimonial__text'>
-      <img class='testimonial-svg' src='./src/assets/icons/testimonial.svg' alt=''>
+      <img class='testimonial-svg' src='./src/assets/icons/testimonial.svg' alt='' width='40' height='32'>
       <h2 class='section-title'>Testimonial</h2>
       <h3>Life-Changing Results &amp; Unmatched Support at Gymnis</h3>
       <p>Since joining Gymnis, my entire approach to fitness has
@@ -159,29 +208,33 @@
         I can’t recommend this gym enough for anyone looking to make a
         real, lasting change</p>
     </div>
-    <img class='testimonial-img' src='./src/assets/images/testimonial.png' alt=''>
+    <picture>
+      <source type='image/avif' srcset='./src/assets/images/testimonial-384.avif 1x, ./src/assets/images/testimonial-770.avif 2x'>
+      <source type='image/webp' srcset='./src/assets/images/testimonial-384.webp 1x, ./src/assets/images/testimonial-770.webp 2x'>
+      <img class='testimonial-img' src='./src/assets/images/testimonial-384.webp' alt='Gym member training with dumbbells' width='384' height='494' loading='lazy' decoding='async'>
+    </picture>
   </section>
 
   <!-- Join Us -->
   <section class='join-us' id='join-us'>
     <h2 class='section-title'>Join Us</h2>
     <form>
-      <fieldset>
+      <section>
         <h3 class='join-subtitle'>1. Select Your Package</h3>
-        
+
         <div class='packages' role='radiogroup' aria-label='Select your package'>
-          <label class='package'>
-            <input class='package__input' type='radio' name='package' value='monthly'>
+          <div class='package'>
+            <input class='package__input' id='package-monthly' type='radio' name='package' value='monthly'>
             <div class='package__head'>
-              <h3>Monthly</h3>
+              <h4>Monthly</h4>
               <span class='price'>$15</span>
               <p>
                 <span>Auto-renewal</span>, cancel anytime
               </p>
             </div>
-            
+
             <div class='package__body'>
-              <h4>Benefit:</h4>
+              <h5>Benefit:</h5>
               <ul class='benefit-list'>
                 <li>Access to Professional Guidance</li>
                 <li>Variety of Equipment</li>
@@ -190,20 +243,23 @@
               </ul>
             </div>
             <span class='package-btn'><span class='package-btn__label'>Get This Package</span></span>
-          </label>
-          
-          <label class='package is-selected'>
-            <input class='package__input' type='radio' name='package' value='yearly' checked>
+            <label class='package__overlay' for='package-monthly'>
+              <span class='visually-hidden'>Select Monthly package</span>
+            </label>
+          </div>
+
+          <div class='package is-selected'>
+            <input class='package__input' id='package-yearly' type='radio' name='package' value='yearly' checked>
             <div class='package__head'>
-              <h3>Yearly</h3>
+              <h4>Yearly</h4>
               <span class='price'>$100</span>
               <p>
                 <span>Great choice</span>, you save <span>$30</span>
               </p>
             </div>
-            
+
             <div class='package__body'>
-              <h4>Benefit:</h4>
+              <h5>Benefit:</h5>
               <ul class='benefit-list'>
                 <li>Access to Professional Guidance</li>
                 <li>Variety of Equipment</li>
@@ -214,68 +270,153 @@
               </ul>
             </div>
             <span class='package-btn'><span class='package-btn__label'>Package Selected</span></span>
-          </label>
+            <label class='package__overlay' for='package-yearly'>
+              <span class='visually-hidden'>Select Yearly package</span>
+            </label>
+          </div>
         </div>
-      </fieldset>
+      </section>
 
-      <fieldset>
-        <h3 class="join-subtitle">2. Select Payment Method</h3>
-        
+      <section>
+        <h3 class='join-subtitle'>2. Select Payment Method</h3>
+
         <div class='payment-methods'>
-          <div class="payment-method">
-            <div class="payment-header">
+          <div class='payment-method'>
+            <div class='payment-header'>
               <h4>Credit Card</h4>
-              <img src="./src/assets/icons/chevron-down.svg">
+              <img src='./src/assets/icons/chevron-down.svg' alt='' aria-hidden='true' width='24' height='24'>
             </div>
-            
-            <div class="payment-options">
-              <input type="radio" name="payment-method" value="visa-mastercard">
-              <label><img src="./src/assets/icons/visa-mastercard.svg"></label>
+
+            <div class='payment-options'>
+              <label class='payment-option'>
+                <input type='radio' name='payment-method' value='visa-mastercard' required>
+                <img src='./src/assets/icons/visa-mastercard.svg' alt='Visa and Mastercard' width='68' height='18'>
+              </label>
             </div>
           </div>
-          
-          <div class="payment-method">
-            <div class="payment-header">
+
+          <div class='payment-method'>
+            <div class='payment-header'>
               <h4>E-Wallet</h4>
-              <img src="./src/assets/icons/chevron-down.svg">
+              <img src='./src/assets/icons/chevron-down.svg' alt='' aria-hidden='true' width='24' height='24'>
             </div>
-            
-            <div class="payment-options">
-              <input type="radio" name="payment-method" value="gopay">
-              <label><img src="./src/assets/icons/gopay.svg"></label>
-              
-              <input type="radio" name="payment-method" value="shopee-pay">
-              <label><img src="./src/assets/icons/shopee-pay.svg"></label>
-              
-              <input type="radio" name="payment-method" value="ovo">
-              <label><img src="./src/assets/icons/ovo.svg"></label>
+
+            <div class='payment-options'>
+              <label class='payment-option'>
+                <input type='radio' name='payment-method' value='gopay'>
+                <img src='./src/assets/icons/gopay.svg' alt='GoPay' width='51' height='17'>
+              </label>
+
+              <label class='payment-option'>
+                <input type='radio' name='payment-method' value='shopee-pay'>
+                <img src='./src/assets/icons/shopee-pay.svg' alt='ShopeePay' width='45' height='20'>
+              </label>
+
+              <label class='payment-option'>
+                <input type='radio' name='payment-method' value='ovo'>
+                <img src='./src/assets/icons/ovo.svg' alt='OVO' width='43' height='20'>
+              </label>
             </div>
           </div>
-          
-          <div class="payment-method">
-            <div class="payment-header">
+
+          <div class='payment-method'>
+            <div class='payment-header'>
               <h4>Bank Transfer</h4>
-              <img src="./src/assets/icons/chevron-down.svg">
+              <img src='./src/assets/icons/chevron-down.svg' alt='' aria-hidden='true' width='24' height='24'>
             </div>
-            
-            <div class="payment-options">
-              <input type="radio" name="payment-method" value="bca">
-              <label><img src="./src/assets/icons/bca.svg"></label>
-              
-              <input type="radio" name="payment-method" value="bni">
-              <label><img src="./src/assets/icons/bni.svg"></label>
-              
-              <input type="radio" name="payment-method" value="mandiri">
-              <label><img src="./src/assets/icons/mandiri.svg"></label>
+
+            <div class='payment-options'>
+              <label class='payment-option'>
+                <input type='radio' name='payment-method' value='bca'>
+                <img src='./src/assets/icons/bca.svg' alt='BCA' width='65' height='20'>
+              </label>
+
+              <label class='payment-option'>
+                <input type='radio' name='payment-method' value='bni'>
+                <img src='./src/assets/icons/bni.svg' alt='BNI' width='62' height='20'>
+              </label>
+
+              <label class='payment-option'>
+                <input type='radio' name='payment-method' value='mandiri'>
+                <img src='./src/assets/icons/mandiri.svg' alt='Mandiri' width='65' height='20'>
+              </label>
             </div>
           </div>
         </div>
-      </fieldset>
+      </section>
 
+      <section>
+        <h3 class='join-subtitle'>3. Have A Voucher Code?</h3>
+        <label class='visually-hidden' for='voucher-code'>Voucher code</label>
+        <input class='voucher-input' type='text' id='voucher-code' name='voucher' placeholder='Enter voucher code (optional)' autocomplete='off'>
+      </section>
+
+      <section>
+        <h3 class='join-subtitle'>4. Billing Detail</h3>
+        <div class='bill'>
+          <p class='billing-label' id='bill-package'>Yearly Package:</p>
+          <span id='total-price' aria-live='polite'>$100</span>
+        </div>
+
+        <div class='bill'>
+          <p class='billing-label'>
+            Billing Totals <span class='billing-notes'>(Price includes 11% VAT)</span>
+          </p>
+          <span id='total-price-vat'>$100</span>
+        </div>
+
+        <div class='terms-agreement'>
+          <input type='checkbox' id='terms' name='terms' required>
+          <label for='terms'>I agree to the <a href='#'>Terms &amp; Conditions</a>, as well
+            as the <a href='#'>Privacy Policy</a> that applies</label>
+        </div>
+      </section>
+
+      <button type='submit' class='submit-btn' disabled>Subscribe Now</button>
     </form>
   </section>
 </main>
 
+<footer>
+  <div class='footer-container'>
+    <p class='footer-label'>&copy; Copyright 2024, All Rights Reserved</p>
+
+    <span class='footer-dot' aria-hidden='true'></span>
+
+    <ul class='social-list'>
+      <li>
+        <a href='#' aria-label='Instagram'>
+          <img src='./src/assets/icons/instagram.svg' alt='' width='24' height='24' decoding='async'>
+        </a>
+      </li>
+      <li>
+        <a href='#' aria-label='YouTube'>
+          <img src='./src/assets/icons/youtube.svg' alt='' width='24' height='24' decoding='async'>
+        </a>
+      </li>
+      <li>
+        <a href='#' aria-label='LinkedIn'>
+          <img src='./src/assets/icons/linkedin.svg' alt='' width='24' height='24' decoding='async'>
+        </a>
+      </li>
+      <li>
+        <a href='#' aria-label='Snapchat'>
+          <img src='./src/assets/icons/snapchat.svg' alt='' width='24' height='24' decoding='async'>
+        </a>
+      </li>
+      <li>
+        <a href='#' aria-label='Threads'>
+          <img src='./src/assets/icons/thread.svg' alt='' width='24' height='24' decoding='async'>
+        </a>
+      </li>
+      <li>
+        <a href='#' aria-label='TikTok'>
+          <img src='./src/assets/icons/tiktok.svg' alt='' width='24' height='24' decoding='async'>
+        </a>
+      </li>
+    </ul>
+  </div>
+</footer>
 <script type='module' src='./src/js/main.js'></script>
 </body>
 </html>

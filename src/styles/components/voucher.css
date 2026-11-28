@@ -1,0 +1,18 @@
+.voucher-input {
+  width: 100%;
+  padding: 16px;
+
+  font-family: inherit;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 18px;
+  color: var(--white-100);
+
+  background: var(--black-200);
+  border: 0;
+  border-radius: 4px;
+}
+
+.voucher-input::placeholder {
+  color: var(--white-200);
+}

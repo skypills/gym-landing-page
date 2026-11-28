@@ -32,6 +32,11 @@
   color: var(--white-200);
 }
 
+.testimonial picture {
+  display: block;
+  flex: 0 0 auto;
+}
+
 .testimonial-img {
   width: 384px;
   height: 495px;

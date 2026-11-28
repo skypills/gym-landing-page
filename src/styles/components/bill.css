@@ -1,0 +1,14 @@
+.bill {
+  display: flex;
+  justify-content: space-between;
+  padding: 16px 36px;
+  margin-bottom: 4px;
+  color: var(--white-200);
+  background-color: var(--black-200);
+}
+
+.billing-notes {
+  font-weight: 300;
+  font-size: 14px;
+  line-height: 18px;
+}
